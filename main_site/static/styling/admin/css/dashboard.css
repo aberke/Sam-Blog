@@ -1,0 +1,56 @@
+/* DASHBOARD */
+
+body {
+	background: url(http://i.imgur.com/YYT7I8r.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+}
+.dashboard a{
+    color: #69AA35;
+}
+.dashboard #content{
+    padding-left: 320px;
+}
+.dashboard #content-related{
+    margin-right: -32em;
+
+}
+.dashboard #main_site table{
+    width: 100%;
+}
+.dashboard #main_site h2{
+    background-color: black;
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+}
+
+.dashboard .module table th {
+    width: 100%;
+}
+
+.dashboard .module table td {
+    white-space: nowrap;
+}
+
+.dashboard .module table td a {
+    display: block;
+    padding-right: .6em;
+}
+
+/* RECENT ACTIONS MODULE */
+
+.module ul.actionlist {
+    margin-left: 0;
+}
+
+ul.actionlist li {
+    list-style-type: none;
+}
+
+ul.actionlist li.changelink {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}

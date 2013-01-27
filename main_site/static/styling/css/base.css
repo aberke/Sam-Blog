@@ -1,0 +1,100 @@
+/*
+burgandy:#af3a4a;
+
+*/
+
+#header .navbar-inner{
+	border-bottom: 6px solid #af3a4a;
+}
+#header h1{
+	color: #af3a4a;
+	padding: 10px;
+	font-size: 50px;
+}
+
+#main-body{
+	padding: 120px;
+	padding-bottom: 20px;
+	background-color: #ffebcd;
+}
+#post-column{
+	margin: 0 auto;
+	width: 900px;
+}
+#main-body .post{
+	max-width: 900px;
+	padding-bottom: 20px;
+}
+
+#main-body .post img{
+	max-height: 400px;
+	/*max-width: 900px;*/
+	margin: auto;
+	border: 8px solid #e45c5c;
+	border-radius: 4px;
+	box-shadow: 10px 10px 5px #af3a4a;
+	display: block;
+}
+.post .accordion{
+	padding-top: 12px;
+}
+.post .accordion-group{
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #e45c5c;
+	color: #cd853f;
+	border: 1px solid #af3a4a;
+}
+.post .accordion-heading a, .post .accordion-heading p{
+	color: #cd853f;
+	font-size: 16px;
+	font-style: bold;
+	font-weight: bold;
+	margin: none;
+}
+.post .accordion-inner{
+	border-top: 1px solid #af3a4a;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+#pagination-holder ul li a{
+	background-color: #e45c5c;
+	color: #af3a4a;
+}
+
+#footwrap{
+	background-color: #ffe4e5;
+	background-image: none;
+	border-bottom: 2px solid #af3a4a;
+	border-top: 2px solid #af3a4a;
+	color: #DB817E;
+	font-size: 10px;
+}
+#footwrap h3{
+	text-align: center;
+	color: #af3a4a;
+}
+
+/* *************************** for share page *************************** */
+
+#submit-me{
+	margin: auto;
+	margin-top: 40px;
+	color: #cd853f;
+	text-align: center;
+}
+#form{
+	padding: 20px;
+	margin-top: 10px;
+	border-radius: 4px;
+	border: 2px solid #cd853f;
+	color: #cd853f;
+	background-color: #ffe4e5;
+}
+
+
+
+
+

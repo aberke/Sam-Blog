@@ -1,0 +1,50 @@
+{% load url from future %}
+
+<!DOCTYPE html>
+<html lang="en"> 
+<head>  
+<meta charset="utf-8">  
+<title>{% if header.title_text %}{{ header.title_text }}{% else %}.{% endif %}</title>
+<meta name="authors" content="Alexandra Berke">
+
+<link rel="shortcut icon" type="text/css" {% if header.shortcut_icon_url %}href="{{ header.title_image_url }}"{% else %}href="{{ header.background_image_url }}"{% endif %}>
+
+<link rel="stylesheet" href="{{ STATIC_URL }}bootstrap/css/bootstrap.css" type="text/css"/>
+<link rel="stylesheet" href="{{ STATIC_URL }}styling/css/base.css" type="text/css"/>
+
+</head>
+
+ <body>
+
+    <style media="screen" type="text/css">
+	    #main-body{
+			background: url("{{ header.background_image_url }}");
+			background-repeat:no-repeat;
+			background-position:center center;
+			-o-background-size: 100% 100%, auto;
+			-moz-background-size: 100% 100%, auto;
+			-webkit-background-size: 100% 100%, auto;
+			background-size: 100% 100%, auto;
+			min-height: 550px;
+		}
+		#thanks{
+			background-color: black;
+			border-radius: 4px;
+			border: 1px solid black;
+			color: gray;
+			width: 200px;
+			margin: auto;
+			padding: 10px;
+			text-align: center;
+		}
+	</style> 
+
+    <!-- main body -->
+    <div id="main-body" class="container-fluid">
+    	<div id="post-column">
+			<div id="thanks">
+				<h2> Sent. <a href="{% url 'serve_index' %}">Blog</a></h2>
+			</div>
+	    </div>
+    </div>	
+

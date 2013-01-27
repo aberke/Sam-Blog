@@ -1,0 +1,64 @@
+{% load url from future %}
+
+<!DOCTYPE html>
+<html lang="en"> 
+<head>  
+<meta charset="utf-8">  
+<title>{% if header.title_text %}{{ header.title_text }}{% else %}.{% endif %}</title>
+<meta name="authors" content="Alexandra Berke">
+
+<link rel="shortcut icon" type="text/css" {% if header.shortcut_icon_url %}href="{{ header.title_image_url }}"{% else %}href="{{ header.background_image_url }}"{% endif %}>
+
+<link rel="stylesheet" href="{{ STATIC_URL }}bootstrap/css/bootstrap.css" type="text/css"/>
+<link rel="stylesheet" href="{{ STATIC_URL }}styling/css/base.css" type="text/css"/>
+
+</head>
+
+ <body>
+    <style media="screen" type="text/css">
+	    #main-body{
+			background: url("{{ header.background_image_url }}");
+			background-repeat:no-repeat;
+			background-position:center center;
+			-o-background-size: 100% 100%, auto;
+			-moz-background-size: 100% 100%, auto;
+			-webkit-background-size: 100% 100%, auto;
+			background-size: 100% 100%, auto;
+			min-height: 550px;
+			padding-top: 50px;
+		}
+		#submit-me, #form{
+			background-color: black;
+			border-radius: 8px;
+			border: 1px solid black;
+			color: gray;
+			width: 600px;
+			margin: auto;
+			padding: 10px;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+	</style> 
+
+    <!-- main body -->
+    <div id="main-body" class="container-fluid">
+    		<div id="submit-me">
+    			<h2>Submit me a photo!</h2>
+    			<h3>If I like it, I will add it to the page</h3>
+    		</div>
+    		<div id="form">
+    			{% if hi %}
+    			<h1> hi</h1>
+    			{% endif %}
+    			{% if invalid %}
+    				<h5> That didn't work, try again with a better email address or image url </h5>
+    			{% endif %}
+		    	<form action="/share/" method="post" enctype="multipart/form-data">{% csrf_token %}
+					{{ form.as_p }}
+					<input type="submit" value="Submit" />
+				</form>
+			</div>
+    </div>	
+
+
+</body>
